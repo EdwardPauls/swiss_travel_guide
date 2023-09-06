@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Swiss Travel Guide</title>
+    <script src="static/script.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="static/style.css?version={{ app_version }}"
+    />
+  </head>
+  <body>
+    <div align="left" style="padding-left: 250px; padding-top: 50px">
+      <img
+        src="https://news.swiss.com/custloads/271800571/md_2593718.png"
+        height="30"
+        border="0"
+        style="display: block"
+      />
+    </div>
+    <h1>Swiss Travel Guide</h1>
+    <form id="input-form" action="" autocomplete="off" method="get">
+      <label for="q">Where would you like to travel?: </label>
+      <input type="text" id="q" name="q" size="100" value="" />
+      <input type="hidden" name="sid" value="{{sid}}" />
+      <input type="submit" name="ask" value="Ask" />
+      <input type="submit" name="reset" value="Reset" />
+    </form>
+    <div id="response">
+      <div id="bot-response">
+        <img id="bot-image" src="static/robot-head.svg" />
+        <div id="bot-utterances">
+          {% for s in say %}
+          <div class="utterance">
+            <div class="utterance-bubble">{{ s }}</div>
+            <div class="utterance-cancel" onclick="cancelLastTurn();">
+              &#10006;
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {{ bot_output|safe }}
+    </div>
+    {% if error %}
+    <div id="response">{{error}}</div>
+    {% endif %}
+  </body>
+</html>
