@@ -1,0 +1,15 @@
+Flask==2.1.0
+gunicorn==20.1.0
+Werkzeug==2.2.2
+google-cloud-aiplatform==1.35.0
+google-cloud-datastore==2.18.0
+google-cloud-logging==1.14.0
+google-cloud-translate==2.0.1
+googlemaps
+levenshtein
+flask_babel==4.0.0
+haversine
+flask-assets
+    rjsmin
+    rcssmin
+

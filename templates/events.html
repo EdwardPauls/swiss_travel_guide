@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+{% for event_list in events.event_lists %}
+  {% if event_list.header %}
+  <h3 class="event-list-header">{{  event_list.header | safe }}</h3>
+  {% endif %}
+  <ul class="events-list">
+    {% for event in event_list.events %}
+    <li class="event-item">
+      <span class="event-title">{{ event.title | safe }}:</span>
+      <span class="event-description"> {{event.description | safe}}</span>
+    </li>
+    {% endfor %}
+  </ul>
+{% endfor %}

@@ -1,0 +1,172 @@
+<ol
+  class="city-list row py-0 list-unstyled"
+  aria-labelledby="a0c9c62e6-5bde-44ac-ab03-e60ef539a56e-results-headline"
+>
+  {% for c in cities %}
+  <li
+    class="result-list col-6 col-md-4 col-lg-3 result-list-item hidden"
+    id="{{'city-' + c['id']|string }}"
+  >
+    <div
+      class="list-tile-card-wrapper-tiles tile-splitted"
+      onclick="onCityClicked(event);"
+    >
+      <button
+        class="btn-link btn-link list-tile-card d-block text-break"
+        type="button"
+      >
+        <div class="card-body">
+          <div class="image-wrapper">
+            <img class="" title="" alt="" src="{{ c.image }}" />
+          </div>
+          <div class="card-text-content">
+            <span class="city-name">{{ c.name[language] }}</span>
+            <span class="country-subtitle">{{c.country[language]}}</span>
+          </div>
+          <div class="city-description-container">
+            <div class="city-description">
+              <div class="loading-box">
+                <img class="loading-gif" src="static/swiss-loader.gif" />
+              </div>
+            </div>
+          </div>
+          <div class="popup-link-box" onClick="onCityClicked(event);">
+            <div class="city-description-opacity-gradient"></div>
+            <div class="city-card-divider"></div>
+            <div class="popup-link">
+              <div class="red-arrow-right"></div>
+              <span class="popup-link-text">{{ _('Get inspired') }}<span/>
+            </div>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="overlay">
+      <div class="popup" onclick="onCityPopupClicked(event);">
+        <div class="close" onclick="onPopupCloseClicked(event);">&times;</div>
+        <div class="tab-header-destination">
+          <span>{{origin}}</span>
+          <img
+            class="tab-plane-icon"
+            src="static/third_party/swiss-plane-icon.png"/>
+          <span>{{c.name[language]}}</span>
+        </div>
+        <div class="tab-button-container">
+          <div class="tab-button" onclick="onTabButtonClicked(event);">
+            {{ _('Itinerary') }}
+          </div>
+          <div id="events-tab-header" class="tab-button tab-no-results"
+              onclick="onTabButtonClicked(event);">
+            {{ _('Events') }}
+          </div>
+          <div class="tab-button" onclick="onTabButtonClicked(event);">
+            {{ _('Flights') }}
+          </div>
+        </div>
+        <div class="tab-container">
+          <div class="tab">
+            <div class="itinerary-container">
+              <div class="city-itinerary-days">
+                <label id="from-label" class="preferences-text">
+                  {{ _('Trip Duration') }}
+                </label>
+                <select
+                  id="itinerary-days-select"
+                  class="select-box tab-select">
+                  {% for n in range(1, 15) %}
+                  <option value="{{ n }}">{{ n }} {{ _('Days')}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <span class="city-itinerary-error" hidden="true">{{ _('Sorry, there was an error when fetching the itinerary, try changing the Trip Duration to re-generate.') }}</span>
+              <div class="city-itinerary-content">
+                <div class="loading-box itinerary-loading-gif-container">
+                  <div class="text-carrousel itinerary-loading-box">
+                    <h1>
+                      <div class="text-carrousel-message-wrapper">
+                        <div class="text-carrousel-message">{{ _('Generating itinerary') }}...</div>
+                        <div class="text-carrousel-message">{{ _('Fetching places') }}...</div>
+                        <div class="text-carrousel-message">{{ _('Loading') }}...</div>
+                      </div>
+                    </h1>
+                    </div>
+                </div>
+                <div class="city-itinerary"></div>
+                <ol class="itinerary-day-list">
+                  {% for n in range(0, 3) %}
+                  <li class="itinerary-day itinerary-loading-box">
+                    <div class="itinerary-placeholder">
+                      <div class="itinerary-placeholder-day"></div>
+                      {% for n in range(0, 3) %}
+                      <div class="itinerary-placeholder-item"></div>
+                      {% endfor %}
+                    </div>
+                  </li>
+                  {% endfor %}
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="tab" id="events-tab" >
+            <div class="city-events-container">
+              <div class="city-events">
+                <div class="loading-box events-loading-box">
+                  <span class="loading-text">{{ _('Generating') }}...</span>
+                  <img class="loading-gif" src="static/swiss-loader.gif" />
+                  <div class="itinerary-placeholder">
+                      <div class="itinerary-placeholder-day"></div>
+                      {% for n in range(0, 5) %}
+                      <div class="itinerary-placeholder-item"></div>
+                      {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab city-flights">
+            <div
+              class="flight-display flight-display-large flight-summary-container"
+              aria-hidden="false">
+              <div class="d-flex justify-content-between">
+                <div class="origin">
+                  <div class="airport-code large-on-sm">
+                    <span class="mb-0 heading-copytext-large" style="text-transform: uppercase">
+                      {{'ZRH' if origin == 'Zurich' else 'GVA'}}
+                    </span>
+                  </div>
+                </div>
+                <img
+                  class="tab-plane-icon"
+                  src="static/third_party/swiss-plane-icon.png"/>
+                <div class="destination">
+                  <div class="airport-code text-right large-on-sm">
+                    <span class="mb-0 heading-copytext-large" style="text-transform: uppercase">
+                      {{c.city_code}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <span class="d-flex justify-content-between">
+                <div class="align-self-start">
+                  <p class="long-name font-type-smaller-variant">{{origin}}</p>
+                </div>
+                <div class="align-self-end">
+                  <p class="long-name font-type-smaller-variant">{{c.name[language]}}</p>
+                </div>
+              </span>
+            </div>
+            <div class="align-self-center text-center book-now-button">
+              <button
+                class="btn btn-sm btn-primary book-button"
+                type="submit"
+                onclick="onBookClicked('https://www.swiss.com{{c.get_booking_link(origin, language)}}');">
+                <span class="">{{ _('Book now') }}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ol>

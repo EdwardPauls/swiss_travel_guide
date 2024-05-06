@@ -1,0 +1,381 @@
+# German translations for PROJECT.
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-03-14 16:59+0100\n"
+"PO-Revision-Date: 2023-10-16 10:06+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: city_events.py:202
+msgid "I could not find suggestions for events happening in the requested months."
+msgstr ""
+"Ich konnte keine Vorschläge für Veranstaltungen finden, die im "
+"gewünschten Zeitraum stattfinden."
+
+#: suggestion_card_data.py:10
+msgid "Try it"
+msgstr "Versuchen"
+
+#: suggestion_card_data.py:14 suggestion_card_data.py:40
+msgid "Beach holidays for a family in Europe"
+msgstr "Strandurlaub für eine Familie in Europa"
+
+#: suggestion_card_data.py:17 suggestion_card_data.py:42
+msgid ""
+"We are a family of three and we are looking for a beach holiday in Europe"
+" for the next summer. What are good destinations where we can also enjoy "
+"some cultural activities?"
+msgstr ""
+"Wir sind eine dreiköpfige Familie und wollen im nächsten Sommer einen "
+"Strandurlaub in Europa unternehmen. Was sind gute Reiseziele, an denen "
+"wir auch einige kulturelle Aktivitäten geniessen können?"
+
+#: suggestion_card_data.py:22
+msgid "Asian food with friends"
+msgstr "Asiatisches Essen mit Freunden"
+
+#: suggestion_card_data.py:25
+msgid ""
+"I want to explore Asian culture and food in a metropolitan destination "
+"with my friends. Any trendy destination you can suggest and with a nice "
+"itinerary?"
+msgstr ""
+"Ich möchte mit meinen Freunden die asiatische Kultur und das Essen in "
+"einer Metropole erkunden. Können Sie ein trendiges Reiseziel mit einer "
+"schönen Reiseroute vorschlagen?"
+
+#: suggestion_card_data.py:30
+msgid "Surf trip in South America"
+msgstr "Surftrip in Südamerika"
+
+#: suggestion_card_data.py:33
+msgid ""
+"I would like to travel to South America with my friends. We like surfing "
+"but also love to enjoy the local food. Do you have good suggestions?"
+msgstr ""
+"Ich möchte mit Freunden nach Südamerika reisen. Wir surfen gerne, essen "
+"aber auch gerne das lokale Essen. Hast du gute Vorschläge?"
+
+#: suggestion_card_data.py:46
+msgid "Gateway to the Nordics"
+msgstr "Urlaub in den nordischen Ländern"
+
+#: suggestion_card_data.py:49
+msgid ""
+"I want to visit Stockholm with my boyfriend for a few days. What kind of "
+"activities can we do there ? Can you share an itinerary for our stay?"
+msgstr ""
+"Ich möchte mit meinem Freund für ein paar Tage Stockholm besuchen. Welche"
+" Aktivitäten können wir dort unternehmen ? Können Sie eine Reiseroute für"
+" unseren Aufenthalt empfehlen?"
+
+#: suggestion_card_data.py:54
+msgid "Shopping in the U.S."
+msgstr "Shopping in den USA"
+
+#: suggestion_card_data.py:57
+msgid ""
+"I want to go shopping in a big city in the US. I also like some cultural "
+"activities when I am around. Do you have any suggestions?"
+msgstr ""
+"Ich möchte in einer Grossstadt in den USA shoppen gehen. Außerdem würde "
+"ich gerne einige kulturelle Aktivitäten unternehmen, wenn ich in der "
+"Umgebung bin. Haben Sie Vorschläge?"
+
+#: templates/cities.html:38
+msgid "Get inspired"
+msgstr "Erkunden"
+
+#: templates/cities.html:56
+msgid "Itinerary"
+msgstr "Reiseverlauf"
+
+#: templates/cities.html:60
+msgid "Events"
+msgstr "Veranstaltungen"
+
+#: templates/cities.html:63
+msgid "Flights"
+msgstr "Flüge"
+
+#: templates/cities.html:71
+msgid "Trip Duration"
+msgstr "Reisedauer"
+
+#: templates/cities.html:77
+msgid "Days"
+msgstr "Tag"
+
+#: templates/cities.html:81
+msgid ""
+"Sorry, there was an error when fetching the itinerary, try changing the "
+"Trip Duration to re-generate."
+msgstr ""
+"Leider ist beim Abrufen der Reiseroute ein Fehler aufgetreten. Versuchen "
+"Sie, die Reisedauer zu ändern, um sie neu zu generieren."
+
+#: templates/cities.html:87
+msgid "Generating itinerary"
+msgstr "Reiseroute erstellen"
+
+#: templates/cities.html:88
+msgid "Fetching places"
+msgstr "Orte werden geladen"
+
+#: templates/cities.html:89 templates/index.html:60
+msgid "Loading"
+msgstr "Lade"
+
+#: templates/cities.html:114
+msgid "Generating"
+msgstr "Generiere"
+
+#: templates/cities.html:163
+msgid "Book now"
+msgstr "Jetzt buchen"
+
+#: templates/controls.html:9 templates/controls_with_suggestion_cards.html:14
+msgid "From"
+msgstr "Von"
+
+#: templates/controls.html:16 templates/controls_with_suggestion_cards.html:21
+msgid "Zurich"
+msgstr "Zürich"
+
+#: templates/controls.html:18 templates/controls_with_suggestion_cards.html:23
+msgid "Geneva"
+msgstr "Genf"
+
+#: templates/controls.html:33
+msgid "Try"
+msgstr "Versuchen"
+
+#: templates/controls.html:33
+msgid "Show me the best beach destinations"
+msgstr "Zeige mir die besten Strandziele"
+
+#: templates/controls.html:33
+msgid "Suggest ideas of destinations to golf"
+msgstr "Schlage Golfreiseziele vor"
+
+#: templates/controls.html:67 templates/controls_with_suggestion_cards.html:80
+msgid "Start Over"
+msgstr "Von vorn anfangen"
+
+#: templates/controls_with_suggestion_cards.html:5
+msgid ""
+"Tell me what you are looking for in a vacation, the same way you would "
+"tell a friend, and I will suggest destinations, available flights, and "
+"even a complete itinerary."
+msgstr ""
+"Beschreiben Sie Ihre Urlaubswünsche wie einem Freund oder einer Freundin."
+" Ich schlage Ihnen dann Reiseziele, verfügbare Flüge und sogar einen "
+"kompletten Reiseplan vor."
+
+#: templates/controls_with_suggestion_cards.html:6
+msgid ""
+"Descriptions can be as simple or as complete as you want and you can "
+"modify results just as easily... just tell me what to change."
+msgstr ""
+"Ihre Reisebeschreibung kann so einfach oder detailliert sein, wie Sie "
+"möchten. Auch Änderungen sind ganz unkompliziert  – sagen Sie mir "
+"einfach, was angepasst werden soll."
+
+#: templates/controls_with_suggestion_cards.html:7
+msgid "Tip:"
+msgstr "Tipp:"
+
+#: templates/controls_with_suggestion_cards.html:7
+msgid "Click on the destinations to view itineraries and more!"
+msgstr "Klicken Sie auf ein Reiseziel, um Routenpläne und mehr zu sehen!"
+
+#: templates/controls_with_suggestion_cards.html:38
+msgid ""
+"Try something like: 'I'd like to go on a beach holiday with my family in "
+"Europe' or 'Show me some popular surf destinations'"
+msgstr ""
+"Probieren Sie etwas wie: 'Ich möchte mit meiner Familie einen "
+"Strandurlaub in Europa machen' oder 'Zeigen Sie mir einige beliebte "
+"Surfziele'"
+
+#: templates/controls_with_suggestion_cards.html:62
+msgid "Find my trip"
+msgstr "Meine Reise finden"
+
+#: templates/controls_with_suggestion_cards.html:63
+msgid "Modify suggestions"
+msgstr "Vorschläge ändern"
+
+#: templates/controls_with_suggestion_cards.html:89
+msgid "...Or just try one of these query ideas"
+msgstr "...Oder probieren Sie eine dieser Ideen"
+
+#: templates/disclaimer_en.html:4 templates/footer.html:16
+msgid "Disclaimer"
+msgstr "Haftungsausschluss"
+
+#: templates/filters.html:4
+msgid "Filter"
+msgstr "Filter"
+
+#: templates/filters.html:13
+msgid "Preferences"
+msgstr "Präferenzen"
+
+#: templates/filters.html:30
+msgid "Region"
+msgstr "Region"
+
+#: templates/filters.html:47
+msgid "Month"
+msgstr "Monat"
+
+#: templates/index.html:11 templates/index.html:38
+msgid "Travel Guide"
+msgstr "Reiseführer"
+
+#: templates/index.html:51
+msgid "Show filters"
+msgstr "Filter anzeigen"
+
+#: templates/index.html:52
+msgid "Hide filters"
+msgstr "Filter ausblenden"
+
+#: templates/index.html:69
+msgid "Load more"
+msgstr "Mehr anzeigen"
+
+#: templates/itinerary.html:5
+msgid "Day"
+msgstr "Tag"
+
+#: templates/places.html:43
+msgid "Not Found"
+msgstr ""
+
+#: templates/places.html:44
+msgid "Could not find details for this place."
+msgstr ""
+
+#: templates/strings.html:1
+msgid "Sorry, I cannot help you with that."
+msgstr "Tut mir leid, da kann ich Ihnen nicht weiterhelfen."
+
+#: templates/strings.html:2
+msgid "Sorry, an unexpected error ocurred. Please try again."
+msgstr ""
+"Es tut mir leid, ich konnte keine Antwort generieren. Bitte versuchen Sie"
+" es erneut."
+
+#: templates/strings.html:3
+msgid "I could not find matching destinations, try a different query."
+msgstr ""
+"Ich konnte keine passenden Ziele finden. Versuchen Sie es mit einer "
+"anderen Abfrage."
+
+#: templates/strings.html:4
+msgid "I am traveling from ${origin}"
+msgstr "Ich reise von ${origin}"
+
+#: templates/strings.html:5
+msgid "I would like to travel between the months of ${minMonth} and ${maxMonth}"
+msgstr "Ich werde zwischen ${minMonth} und ${maxMonth} reisen"
+
+#: templates/strings.html:6
+msgid "Remove preference ${preference}"
+msgstr "Entferne den Präferenz ${preference}"
+
+#: templates/strings.html:7
+msgid "Do not filter regions by ${region}"
+msgstr "Entferne die Beschränkung der Regionen auf ${region}"
+
+#: templates/strings.html:8
+msgid ""
+"You can keep narrowing down your search, or change something. For example"
+" you can say 'I also like museums', or 'Actually, I would like to travel "
+"to north america'"
+msgstr ""
+"Sie können Ihre Suche weiter eingrenzen oder etwas ändern. Zum Beispiel "
+"können Sie sagen: 'Ich mag auch Museen' oder 'Eigentlich möchte ich nach "
+"Nordamerika reisen'"
+
+#: templates/strings.html:9
+msgid "Modify Suggestions"
+msgstr "Vorschläge ändern"
+
+#: templates/strings.html:10
+msgid "Show me popular destinations."
+msgstr "Zeigen Sie mir beliebte Reiseziele."
+
+#: templates/strings.html:11
+msgid "Show me popular destinations in Scandinavia"
+msgstr "Zeigen Sie mir beliebte Reiseziele in Skandinavien."
+
+#: templates/strings.html:12
+msgid "Show me destinations in nordic countries"
+msgstr "Zeigen Sie mir Reiseziele in den Nordischen Ländern"
+
+#: templates/utterance.html:8
+msgid "Sorry, I was not able to generate a response. Please try again."
+msgstr ""
+"Es tut mir leid, ich konnte keine Antwort generieren. Bitte versuchen Sie"
+" es erneut."
+
+#~ msgid "Itinerary for Stockholm"
+#~ msgstr "Reiseplan für Stockholm"
+
+#~ msgid ""
+#~ "I am thinking to visit Stockholm "
+#~ "for a few days. What sorts of "
+#~ "things can I do there?"
+#~ msgstr ""
+#~ "Ich denke darüber nach, Stockholm für"
+#~ " ein paar Tage zu besuchen. Welche"
+#~ " Dinge kann ich dort unternehmen?"
+
+#~ msgid "High dining discoveries in South East Asia"
+#~ msgstr "Gehobene kulinarische Entdeckungen in Südostasien"
+
+#~ msgid ""
+#~ "I would love to explore places "
+#~ "known for their excellent fine dining"
+#~ " options in south east Asia."
+#~ msgstr ""
+#~ "Ich würde gerne Orte erkunden, die "
+#~ "für ihre ausgezeichneten gehobenen "
+#~ "Speisemöglichkeiten in Südostasien bekannt "
+#~ "sind."
+
+#~ msgid "Culinary trip in the Mediterranean"
+#~ msgstr "Kulinarische Reise im Mittelmeerraum"
+
+#~ msgid ""
+#~ "Show me unusual locations in the "
+#~ "mediterranean known for their excellent "
+#~ "food"
+#~ msgstr ""
+#~ "Zeige mir ungewöhnliche Orte im "
+#~ "Mittelmeerraum, die für ihr ausgezeichnetes"
+#~ " Essen bekannt sind."
+
+#~ msgid "Exploring Northern Italy"
+#~ msgstr "Norditalien erkunden"
+
+#~ msgid ""
+#~ "I want to visit Northern Italy for"
+#~ " a week, I love local food, "
+#~ "particularly pizza. Where can I go?"
+#~ msgstr ""
+#~ "Ich möchte eine Woche lang Norditalien"
+#~ " besuchen, ich liebe lokales Essen, "
+#~ "besonders Pizza. Wohin kann ich gehen?"
+

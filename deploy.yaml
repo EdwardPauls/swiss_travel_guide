@@ -1,0 +1,5 @@
+runtime: google
+instance_class: B2
+app_engine_apis: true
+manual_scaling:
+  instances: 1

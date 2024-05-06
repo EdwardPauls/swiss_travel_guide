@@ -1,0 +1,299 @@
+# Translations template for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-03-14 16:59+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+
+#: city_events.py:202
+msgid "I could not find suggestions for events happening in the requested months."
+msgstr ""
+
+#: suggestion_card_data.py:10
+msgid "Try it"
+msgstr ""
+
+#: suggestion_card_data.py:14 suggestion_card_data.py:40
+msgid "Beach holidays for a family in Europe"
+msgstr ""
+
+#: suggestion_card_data.py:17 suggestion_card_data.py:42
+msgid ""
+"We are a family of three and we are looking for a beach holiday in Europe"
+" for the next summer. What are good destinations where we can also enjoy "
+"some cultural activities?"
+msgstr ""
+
+#: suggestion_card_data.py:22
+msgid "Asian food with friends"
+msgstr ""
+
+#: suggestion_card_data.py:25
+msgid ""
+"I want to explore Asian culture and food in a metropolitan destination "
+"with my friends. Any trendy destination you can suggest and with a nice "
+"itinerary?"
+msgstr ""
+
+#: suggestion_card_data.py:30
+msgid "Surf trip in South America"
+msgstr ""
+
+#: suggestion_card_data.py:33
+msgid ""
+"I would like to travel to South America with my friends. We like surfing "
+"but also love to enjoy the local food. Do you have good suggestions?"
+msgstr ""
+
+#: suggestion_card_data.py:46
+msgid "Gateway to the Nordics"
+msgstr ""
+
+#: suggestion_card_data.py:49
+msgid ""
+"I want to visit Stockholm with my boyfriend for a few days. What kind of "
+"activities can we do there ? Can you share an itinerary for our stay?"
+msgstr ""
+
+#: suggestion_card_data.py:54
+msgid "Shopping in the U.S."
+msgstr ""
+
+#: suggestion_card_data.py:57
+msgid ""
+"I want to go shopping in a big city in the US. I also like some cultural "
+"activities when I am around. Do you have any suggestions?"
+msgstr ""
+
+#: templates/cities.html:38
+msgid "Get inspired"
+msgstr ""
+
+#: templates/cities.html:56
+msgid "Itinerary"
+msgstr ""
+
+#: templates/cities.html:60
+msgid "Events"
+msgstr ""
+
+#: templates/cities.html:63
+msgid "Flights"
+msgstr ""
+
+#: templates/cities.html:71
+msgid "Trip Duration"
+msgstr ""
+
+#: templates/cities.html:77
+msgid "Days"
+msgstr ""
+
+#: templates/cities.html:81
+msgid ""
+"Sorry, there was an error when fetching the itinerary, try changing the "
+"Trip Duration to re-generate."
+msgstr ""
+
+#: templates/cities.html:87
+msgid "Generating itinerary"
+msgstr ""
+
+#: templates/cities.html:88
+msgid "Fetching places"
+msgstr ""
+
+#: templates/cities.html:89 templates/index.html:60
+msgid "Loading"
+msgstr ""
+
+#: templates/cities.html:114
+msgid "Generating"
+msgstr ""
+
+#: templates/cities.html:163
+msgid "Book now"
+msgstr ""
+
+#: templates/controls.html:9 templates/controls_with_suggestion_cards.html:14
+msgid "From"
+msgstr ""
+
+#: templates/controls.html:16 templates/controls_with_suggestion_cards.html:21
+msgid "Zurich"
+msgstr ""
+
+#: templates/controls.html:18 templates/controls_with_suggestion_cards.html:23
+msgid "Geneva"
+msgstr ""
+
+#: templates/controls.html:33
+msgid "Try"
+msgstr ""
+
+#: templates/controls.html:33
+msgid "Show me the best beach destinations"
+msgstr ""
+
+#: templates/controls.html:33
+msgid "Suggest ideas of destinations to golf"
+msgstr ""
+
+#: templates/controls.html:67 templates/controls_with_suggestion_cards.html:80
+msgid "Start Over"
+msgstr ""
+
+#: templates/controls_with_suggestion_cards.html:5
+msgid ""
+"Tell me what you are looking for in a vacation, the same way you would "
+"tell a friend, and I will suggest destinations, available flights, and "
+"even a complete itinerary."
+msgstr ""
+
+#: templates/controls_with_suggestion_cards.html:6
+msgid ""
+"Descriptions can be as simple or as complete as you want and you can "
+"modify results just as easily... just tell me what to change."
+msgstr ""
+
+#: templates/controls_with_suggestion_cards.html:7
+msgid "Tip:"
+msgstr ""
+
+#: templates/controls_with_suggestion_cards.html:7
+msgid "Click on the destinations to view itineraries and more!"
+msgstr ""
+
+#: templates/controls_with_suggestion_cards.html:38
+msgid ""
+"Try something like: 'I'd like to go on a beach holiday with my family in "
+"Europe' or 'Show me some popular surf destinations'"
+msgstr ""
+
+#: templates/controls_with_suggestion_cards.html:62
+msgid "Find my trip"
+msgstr ""
+
+#: templates/controls_with_suggestion_cards.html:63
+msgid "Modify suggestions"
+msgstr ""
+
+#: templates/controls_with_suggestion_cards.html:89
+msgid "...Or just try one of these query ideas"
+msgstr ""
+
+#: templates/disclaimer_en.html:4 templates/footer.html:16
+msgid "Disclaimer"
+msgstr ""
+
+#: templates/filters.html:4
+msgid "Filter"
+msgstr ""
+
+#: templates/filters.html:13
+msgid "Preferences"
+msgstr ""
+
+#: templates/filters.html:30
+msgid "Region"
+msgstr ""
+
+#: templates/filters.html:47
+msgid "Month"
+msgstr ""
+
+#: templates/index.html:11 templates/index.html:38
+msgid "Travel Guide"
+msgstr ""
+
+#: templates/index.html:51
+msgid "Show filters"
+msgstr ""
+
+#: templates/index.html:52
+msgid "Hide filters"
+msgstr ""
+
+#: templates/index.html:69
+msgid "Load more"
+msgstr ""
+
+#: templates/itinerary.html:5
+msgid "Day"
+msgstr ""
+
+#: templates/places.html:43
+msgid "Not Found"
+msgstr ""
+
+#: templates/places.html:44
+msgid "Could not find details for this place."
+msgstr ""
+
+#: templates/strings.html:1
+msgid "Sorry, I cannot help you with that."
+msgstr ""
+
+#: templates/strings.html:2
+msgid "Sorry, an unexpected error ocurred. Please try again."
+msgstr ""
+
+#: templates/strings.html:3
+msgid "I could not find matching destinations, try a different query."
+msgstr ""
+
+#: templates/strings.html:4
+msgid "I am traveling from ${origin}"
+msgstr ""
+
+#: templates/strings.html:5
+msgid "I would like to travel between the months of ${minMonth} and ${maxMonth}"
+msgstr ""
+
+#: templates/strings.html:6
+msgid "Remove preference ${preference}"
+msgstr ""
+
+#: templates/strings.html:7
+msgid "Do not filter regions by ${region}"
+msgstr ""
+
+#: templates/strings.html:8
+msgid ""
+"You can keep narrowing down your search, or change something. For example"
+" you can say 'I also like museums', or 'Actually, I would like to travel "
+"to north america'"
+msgstr ""
+
+#: templates/strings.html:9
+msgid "Modify Suggestions"
+msgstr ""
+
+#: templates/strings.html:10
+msgid "Show me popular destinations."
+msgstr ""
+
+#: templates/strings.html:11
+msgid "Show me popular destinations in Scandinavia"
+msgstr ""
+
+#: templates/strings.html:12
+msgid "Show me destinations in nordic countries"
+msgstr ""
+
+#: templates/utterance.html:8
+msgid "Sorry, I was not able to generate a response. Please try again."
+msgstr ""
+

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="tablesaw-enhanced">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://www.swiss.com/ch/en/offers" />
+    <link
+      href="static/third_party/index.47e6616f3d06c8943956.css"
+      rel="stylesheet"
+    />
+    <link
+      href="static/third_party/0.c7efa9d1a71f55a4b781.css"
+      rel="stylesheet"
+    />
+    <script src="static/filters.js"></script>
+    <script src="static/script.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="static/style.css?version={{ app_version }}"
+    />
+    <title>Travel Guide | SWISS</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.swiss.com/etc/designs/lx/favicon.ico"
+      type="image/ico"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/third_party/1963.3e981f63dd4386494a6e.css"
+    />
+    <style>
+      #error-message {
+        font-size: large;
+        color: red;
+      }
+      .input-wrapper {
+        position: relative;
+      }
+      .input-wrapper > label {
+        position: absolute;
+        top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container contentpage-wrapper sticky-header-active">
+      <div class="sticky-header-placeholder"></div>
+      <header id="header" class="common-header-wrap common-header-wrap-to-top">
+        <div class="heading-medium sr-only">Swiss</div>
+        <div class="common-header common-header-container">
+          <div class="common-header-megadropdown-fog d-none"></div>
+          <div
+            class="common-header-inner common-header-container position-relative d-flex align-items-center justify-content-between"
+          >
+            <div class="common-header-logo">
+              <a href="https://www.swiss.com/ch/en/homepage" class="mb-0 w-100">
+                <img
+                  class="common-header-logo-image"
+                  src="static/third_party/swiss-logo.svg"
+                  alt="Swiss logo, back to homepage"
+                />
+              </a>
+            </div>
+            <div class="common-header-nav-wrap">
+              <a
+                href="https://www.swiss.com/ch/en/homepage"
+                class="margin-bottom=0px"
+              >
+                <img
+                  class="common-header-logo-image"
+                  src="static/third_party/swiss-header-links.png"
+                  alt="Swiss header links"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="page-content">
+        <h2 class="heading-large">Newsletter Generator</h2>
+        <div
+          class="df-header-section pb-3"
+          data-testid="header-section-wrapper"
+        >
+          <div class="row">
+            <div class="col-md-3">
+              <form
+                id="input-form"
+                action=""
+                autocomplete="off"
+                method="get"
+                onsubmit="return setLoadingResults()"
+              >
+                <div class="input-wrapper">
+                  <label for="destination">Origin</label>
+                  <input
+                    placeholder="Enter origin city"
+                    class="form-input-box"
+                    type="text"
+                    id="origin"
+                    name="o"
+                    size="50"
+                    value="{{ origin }}"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="destination">Destination</label>
+                  <input
+                    placeholder="Enter destination city"
+                    class="form-input-box"
+                    type="text"
+                    id="destination"
+                    name="d"
+                    size="50"
+                    value="{{ destination }}"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="language">Language</label>
+                  <input
+                    placeholder="Enter language (en, fr, etc.)"
+                    class="form-input-box"
+                    type="text"
+                    id="language"
+                    name="l"
+                    size="50"
+                    value="{{ language }}"
+                  />
+                </div>
+                <div class="input-wrapper">
+                  <label for="interest">Interest</label>
+                  <input
+                    placeholder="Enter interest (golfing, etc.)"
+                    class="form-input-box"
+                    type="text"
+                    id="interest"
+                    name="i"
+                    size="50"
+                    value="{{ interest }}"
+                  />
+                </div>
+                <button
+                  class="form-button btn-link"
+                  type="submit"
+                  name="generate"
+                >
+                  <span class="">Generate</span>
+                </button>
+              </form>
+              {% if error %}
+              <div id="error-message">{{ error }}</div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo">
+      <h2 class="sr-only" id="footer" tabindex="-1">Footer</h2>
+
+      <div class="subfooter">
+        <div
+          class="py-7 d-flex flex-column flex-md-row align-items-center justify-content-between container"
+        >
+          <h2 class="heading-medium sr-only">Copyright</h2>
+          <div
+            class="d-flex flex-column flex-md-row align-items-center justify-content-between"
+          >
+            <a href="https://www.swiss.com/" class="d-flex m-2">
+              <div class="sr-only">Swiss</div>
+              <img
+                class="swiss-star-alliance-footer-logo"
+                src="static/third_party/swiss-logo.svg"
+                width="80"
+                alt="Homepage"
+              />
+            </a>
+            <div class="copyright copytext-small m-2 ml-md-9">
+              © Swiss International Air Lines
+            </div>
+          </div>
+
+          <a
+            href="https://www.staralliance.com/"
+            target="_blank"
+            class="d-flex m-2 py-7 py-md-0"
+          >
+            <div class="sr-only">Star Alliance</div>
+            <img
+              class="swiss-footer-logo"
+              src="static/third_party/star-alliance.svg"
+              alt="Homepage"
+              width="148"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

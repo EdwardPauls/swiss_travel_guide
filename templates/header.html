@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<header id="header" class="common-header-wrap common-header-wrap-to-top">
+  <div class="heading-medium sr-only">Swiss</div>
+  <div class="common-header common-header-container">
+    <div class="common-header-megadropdown-fog d-none"></div>
+    <div
+      class="common-header-inner common-header-container position-relative d-flex align-items-center justify-content-between">
+      <div class="common-header-logo">
+        <a href="https://www.swiss.com/ch/en/homepage" class="mb-0 w-100">
+          <img
+            class="common-header-logo-image"
+            src="static/third_party/swiss-logo.svg"
+            alt="Swiss logo, back to homepage" />
+        </a>
+      </div>
+      <div class="language-selection-container">
+        <div class="language-icon-box">
+          <img
+            class="language-icon"
+            src="static/language-icon.png"
+            alt="Language" />
+        </div>
+        <select
+          id="language-select"
+          class="language-select-box"
+          onchange="languageChanged();">
+          <option value="en" selected="true">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</header>

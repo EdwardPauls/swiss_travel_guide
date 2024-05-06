@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<div id="disclaimer-overlay" class="disclaimer-overlay">
+  <div class="popup">
+    <div class="close" onclick="onDisclaimerClosed(event);">&times;</div>
+    {% include 'disclaimer_en.html' %}
+  </div>
+</div>
+
+<footer role="contentinfo">
+  <h2 class="sr-only" id="footer" tabindex="-1">Footer</h2>
+  <div id="disclaimer-box" class="disclaimer-box hidden">
+    <div class="disclaimer-close" onclick="onDisclaimerClosed(event);">
+      &times;
+    </div>
+    <div class="disclaimer-content">
+      <h3>{{ _('Disclaimer') }}</h3>
+    </div>
+  </div>
+  <div class="subfooter">
+    <div
+      class="py-7 d-flex flex-column flex-md-row align-items-center justify-content-between container">
+      <h2 class="heading-medium sr-only">Copyright</h2>
+      <div
+        class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <a href="https://www.swiss.com/" class="d-flex m-2">
+          <div class="sr-only">Swiss</div>
+          <img
+            class="swiss-star-alliance-footer-logo"
+            src="static/third_party/swiss-logo.svg"
+            width="80"
+            alt="Homepage" />
+        </a>
+        <div class="copyright copytext-small m-2 ml-md-9">
+          © Swiss International Air Lines
+        </div>
+        <a
+          href="#"
+          onclick="onDisclaimerOpened(event);return false;"
+          class="disclaimer-link-text"
+          >Disclaimer</a
+        >
+      </div>
+      <a
+        href="https://www.staralliance.com/"
+        target="_blank"
+        class="d-flex m-2 py-7 py-md-0">
+        <div class="sr-only">Star Alliance</div>
+        <img
+          class="swiss-footer-logo"
+          src="static/third_party/star-alliance.svg"
+          alt="Homepage"
+          width="148" />
+      </a>
+    </div>
+  </div>
+</footer>

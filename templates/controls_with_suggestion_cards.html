@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<div class="row">
+  <div class="col-md-4">
+    <div class="guidance-text">
+      <p>{{ _("Tell me what you are looking for in a vacation, the same way you would tell a friend, and I will suggest destinations, available flights, and even a complete itinerary.") }}</p>
+      <p>{{ _("Descriptions can be as simple or as complete as you want and you can modify results just as easily... just tell me what to change.") }}</p>
+      <p><b>{{ _("Tip:") }}</b> {{ _("Click on the destinations to view itineraries and more!") }}</p>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="row">
+      <div class="col-md-12 origin-container">
+        <label id="from-label" class="preferences-text">
+          {{ _('From') }}
+        </label>
+        <select
+          id="origin-select"
+          class="select-box"
+          onchange="originChanged();">
+          <option value="Zurich" selected="true">
+            {{ _('Zurich') }}
+          </option>
+          <option value="Geneva">{{ _('Geneva') }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 input-form-column textarea-input">
+        <form
+          id="input-form"
+          class="input-form"
+          action=""
+          autocomplete="off"
+          method="get"
+          onsubmit="submitForm();">
+          <div class="input-wrapper textarea-input">
+            <!-- <textarea -->
+              <textarea placeholder="{{ _("Try something like: 'I'd like to go on a beach holiday with my family in Europe' or 'Show me some popular surf destinations'") }}"
+                  class="form-input-box textarea-input"
+                  type="text"
+                  id="q"
+                  name="q"
+                  rows="5"
+                  cols="50"
+                  maxlength="250"></textarea>
+          </div>
+          <button class="send-icon-button-wrapper textarea-input">
+            <div
+              id="send-icon-button"
+              type="submit"
+              name="ask"
+              value="Ask">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="send-icon"
+                id="send-icon">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                <path d="M0 0h24v24H0z" fill="none"></path>
+              </svg>
+            </div>
+            <div class="send-button-text-wrapper"">
+              <span id="text-find-my-trip" class="send-button-text">{{ _('Find my trip') }}</span>
+              <span id="text-modify-suggestions" class="send-button-text  invisible">{{ _('Modify suggestions') }}</span>
+            </div>
+          </button>
+          <input type="hidden" name="sid" value="" />
+          <input type="hidden" name="l" value="" />
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8"></div>
+      <div class="col-md-4">
+        <button
+          class="form-button btn-link df-reset-filters-button textarea-input"
+          name="reset"
+          onclick="onResetClicked();"
+          value="Reset">
+          <img src="static/third_party/resetIcon.png" />
+          <span class="">{{ _('Start Over') }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% if suggestion_cards  %}
+<div id="suggestion-cards-section">
+  <div class="row">
+    <div class="suggestion-header">{{ _('...Or just try one of these query ideas') }}</div>
+  </div>
+  <div class="row suggestion-cards-zurich">
+    {% for card in suggestion_cards['Zurich'] %}
+    <div class="col-md-3 suggestion-card-item" onclick="onSuggestionCardClicked(&quot;{{_(card.query)}}&quot;)">
+      <div class="suggestion-card-icon">
+        <img class="suggestion-img" src="{{card.img}}">
+      </div>
+      <div class="suggestion-card-content">
+        <div class="suggestion-card-text">
+          {{ _(card.title) }}
+        </div>
+        <div class="suggestion-card-action">
+          {{ _(card.link_text) }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="row suggestion-cards-geneva hidden">
+    {% for card in suggestion_cards['Geneva'] %}
+    <div class="col-md-3 suggestion-card-item" onclick="onSuggestionCardClicked(&quot;{{_(card.query)}}&quot;)">
+      <div class="suggestion-card-icon">
+        <img class="suggestion-img" src="{{card.img}}">
+      </div>
+      <div class="suggestion-card-content">
+        <div class="suggestion-card-text">
+          {{ _(card.title) }}
+        </div>
+        <div class="suggestion-card-action">
+          {{ _(card.link_text) }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+<div class="df-header-section pb-3" data-testid="header-section-wrapper">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div id="response">
+      <div id="bot-response">
+        <div id="utterance-container">
+          <div class="utterance">
+            <div class="utterance-bubble"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

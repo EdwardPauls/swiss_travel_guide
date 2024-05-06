@@ -1,0 +1,61 @@
+<div
+  class="df-filters-headline-wrapper d-flex flex-column flex-lg-row justify-content-between mb-4">
+  <h2 class="heading-small df-filters-section-headline mb-0">
+    {{ _('Filter') }}
+  </h2>
+  <button class="btn-link df-reset-filters-button" type="button">
+    <span class=""></span>
+  </button>
+</div>
+<div role="group" class="df-filters-section-container">
+  {% if state.get('list_cities', {}).get('preferences') %}
+  <section class="df-filters-section-filter">
+    <h3 class="heading-copytext-large pb-8">{{ _('Preferences') }}</h3>
+    <div class="preferences-box">
+      {% for p in state['list_cities']['preferences_display'] %}
+      <div class="preference">
+        <span class="preference-text">{{ p }}</span>
+        <span
+          class="preference-cancel"
+          onclick="sendQuery(getRemovePreferenceQuery('{{ p }}'));">
+          &#215;
+        </span>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+  {% if state.get('list_cities', {}).get('region') %}
+  <section class="df-filters-section-filter">
+    <h3 class="heading-copytext-large pb-8">{{ _('Region') }}</h3>
+    <div class="preferences-box">
+      {% for r in state['list_cities']['region_display'] %}
+      <div class="preference">
+        <span class="preference-text">{{ r }}</span>
+        <span
+          class="preference-cancel"
+          onclick="sendQuery(getRemoveRegionQuery('{{ r }}'));">
+          &#215;
+        </span>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>
+  <section class="df-filters-section-filter">
+    <h3 class="heading-copytext-large pb-8">{{ _('Month') }}</h3>
+    <div class='slider-wrapper'>
+      <div class="slider-values">
+        <span id="range-left"></span>
+        <span> &dash; </span>
+        <span id="range-right"></span>
+      </div>
+      <div class="sl-container">
+        <div id="slider-track" class="slider-track"></div>
+        <input type="range" min="0" max="11" value="0" id="slider-left">
+        <input type="range" min="0" max="11" value="11" id="slider-right">
+      </div>
+    </div>
+  </section>
+</div>

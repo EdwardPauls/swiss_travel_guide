@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<ol class="itinerary-day-list">
+  {% for day in itinerary.days %}
+  <li class="itinerary-day">
+    <div class="day-title">{{ _('Day') }} {{ day.index }}</div>
+    <ul class="activity-list">
+      {% for activity in day.activities %}
+      <li class="activity-item">
+        {% if activity.query %}
+          {{ activity.prefix | safe }}
+          <span
+              id="{{ activity.query.id }}"
+              class="place-item itinerary-activity">{{activity.query.text}}
+          </span>
+          <div class="place-card place-floating-card hidden"
+                id="place-{{ activity.query.id }}">
+              <div class="place-card-content">
+                <div class="place-card-image">
+                  <img class="place-card-loading-image" src="static/swiss-loader.gif">
+                </div>
+                <div class="place-card-details loading-card-text">
+                  <div class="close-place" onclick="onPlaceCardClosedClicked(event);">  &times;
+                  </div>
+                  <div class="place-card-name">.</div>
+                  <div class="place-card-text">
+                    <span class="loading-text">.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {{ activity.suffix | safe }}
+        {% else %}
+          {{ activity.text | safe }}
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ol>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="tablesaw-enhanced">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://www.swiss.com/ch/en/offers" />
+    {% assets "index_css" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}" type="text/css" />
+    {% endassets %}
+
+    <title>{{ _('Travel Guide') }} | SWISS</title>
+    <link
+      rel="shortcut icon"
+      href="https://www.swiss.com/etc/designs/lx/favicon.ico"
+      type="image/ico" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "{{ ga_id }}");
+    </script>
+  </head>
+  <body>
+    {% assets "index_js" %}
+      <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+
+    <div class="container contentpage-wrapper sticky-header-active">
+      <div class="sticky-header-placeholder"></div>
+      {% include 'header.html' %}
+      <div class="contentpage container-fluid" role="main">
+        <h2 class="heading-large">{{ _('Travel Guide') }}</h2>
+        {% if suggestion_cards_enabled %}
+          {% include 'controls_with_suggestion_cards.html' %}
+        {% else %}
+           {% include 'controls.html' %}
+        {% endif %}
+        <div class="row pt-0">
+          <div class="col-md-1 show-filters-section">
+            <button
+              class="btn-link show-filters-button"
+              value="Show Filters"
+              onclick="onShowFiltersClick();">
+              <i id="show-filters-arrow" class="arrow down"></i>
+              <span class="filters-button show">{{ _('Show filters') }}</span>
+              <span class="filters-button remove">{{ _('Hide filters') }}</span>
+            </button>
+          </div>
+          <div class="df-filters col-md-3">
+            <div id="filters" class="df-filters-section"></div>
+          </div>
+          <div class="col-md-9 col-12 df-result-wrapper results-section">
+            <div id="results-loading" class="hidden">
+              <div class="loading-text">{{ _('Loading') }}...</div>
+              <img class="loading-gif" src="static/swiss-loader.gif" />
+            </div>
+            <div class="map-and-tiles-section">
+              <div class="df-result-section">
+                <div id="cities-container"></div>
+              </div>
+              <div id="load-more-button" class="text-center mb-3 hidden">
+                <button class="btn btn-secondary" type="button">
+                  <span>{{ _('Load more') }}</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="metadata" hidden="true">{% include 'strings.html' %}</div>
+    {% include 'footer.html' %}
+  </body>
+</html>

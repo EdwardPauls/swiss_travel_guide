@@ -1,0 +1,11 @@
+<div id="utterance-container">
+  {% if say %}
+  <div class="utterance">
+    <div class="utterance-bubble">{{ say[-1] }}</div>
+  </div>
+  {% elif error %}
+  <div class="utterance-bubble error-message">
+    {{ _('Sorry, I was not able to generate a response. Please try again.') }}
+  </div>
+  {% endif %}
+</div>

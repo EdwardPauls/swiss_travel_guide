@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<div
+    class="df-header-section pb-3"
+    data-testid="header-section-wrapper">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="origin-container">
+          <label id="from-label" class="preferences-text">
+            {{ _('From') }}
+          </label>
+          <select
+            id="origin-select"
+            class="select-box"
+            onchange="originChanged();">
+            <option value="Zurich" selected="true">
+              {{ _('Zurich') }}
+            </option>
+            <option value="Geneva">{{ _('Geneva') }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-7 input-form-column">
+        <form
+          id="input-form"
+          class="input-form"
+          action=""
+          autocomplete="off"
+          method="get"
+          onsubmit="submitForm();">
+          <div class="input-wrapper">
+            <!-- <textarea -->
+            <input
+              placeholder="{{ _('Try') }}: '{{ _('Show me the best beach destinations') }}', '{{ _('Suggest ideas of destinations to golf') }}'"
+              class="form-input-box"
+              type="text"
+              id="q"
+              name="q"
+              value="" />
+            <!-- maxlength="150"></textarea> -->
+            <div class="send-icon-button-wrapper">
+              <button
+                id="send-icon-button"
+                type="submit"
+                name="ask"
+                value="Ask">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="send-icon"
+                  id="send-icon">
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <input type="hidden" name="sid" value="" />
+          <input type="hidden" name="l" value="" />
+        </form>
+      </div>
+      <div class="col-md-2">
+        <button
+          class="form-button btn-link df-reset-filters-button"
+          name="reset"
+          onclick="onResetClicked();"
+          value="Reset">
+          <img src="static/third_party/resetIcon.png" />
+          <span class="">{{ _('Start Over') }}</span>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div id="response">
+        <div id="bot-response">
+          <div id="utterance-container">
+            <div class="utterance">
+              <div class="utterance-bubble"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% for place in places %}
+<div class="place-card-content">
+  <div class="place-image-wrapper">
+    <img class="place-card-image" src="data:image/png;base64,{{ place.image_b64|safe }}">
+    {% if place.attribution %}
+    <span> Image by: {{ place.attribution|safe }}</span>
+    {% endif %}
+  </div>
+
+  <div class="place-card-details">
+    <div class="close-place" onclick="onPlaceCardClosedClicked(event);">  &times; </div>
+    <div class="place-card-name">{{ place.name }} </div>
+
+    {% if place.description %}
+    <div class="place-card-text">{{ place.description| safe }} </div>
+    {% endif %}
+
+    <div class="place-icons-container">
+      <div class="place-icon-wrapper">
+        <a class="place-card-icon" href={{ place.url }} class="" target="_blank" alt="Google Maps">
+          <span class="place-icon-label">Map</span>
+          <img class="filter-red" src = "static/location-icon.svg" />
+        </a>
+      </div>
+      {% if place.website %}
+      <div class="place-icon-wrapper">
+        <a class="place-card-icon" href={{ place.website }} target="_blank" alt="Website" >
+          <span class="place-icon-label">Website</span>
+          <img class="filter-red" src = "static/website-icon.svg" />
+        </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% if not places %}
+<div class="place-card-content">
+  <div class="place-card-details">
+    <div class="close-place" onclick="onPlaceCardClosedClicked(event);">  &times; </div>
+    <div class="place-card-name place-not-found">{{ _("Not Found")}} </div>
+    <div class="place-card-text">{{ _("Could not find details for this place.") }} </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
